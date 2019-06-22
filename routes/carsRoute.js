@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
-const url = "mongodb://127.0.0.1:27017/automart";
-//const url = "mongodb+srv://danrejsa:" + process.env.MONGO_ATLAS_PW +"@danrej-ann6l.mongodb.net/test?retryWrites=true&w=majority"
+//const url = "mongodb://127.0.0.1:27017/automart";
+const url = "mongodb+srv://danrejsa:" + process.env.MONGO_ATLAS_PW +"@danrej-ann6l.mongodb.net/test?retryWrites=true&w=majority"
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 const router = express.Router();
