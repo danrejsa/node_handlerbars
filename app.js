@@ -37,7 +37,7 @@ const carApi = require("./api/car");
 const flagApi = require("./api/flag");
 const userApi = require("./api/users");
 //const orderApi = require("./api/order");
-const Homepage = require("./routes/carsRoute");
+//const Homepage = require("./routes/carsRoute");
 const orders = require("./routes/orderRoute");
 const userq = require("./routes/userRoute");
 //const flags = require("./routes/flagRoute");
@@ -128,7 +128,7 @@ app.use(passport.session());
   
 //app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 //app.use('/api/v1', router);
-app.use( '/', Homepage);
+//app.use( '/', Homepage);
 app.use( '/orders', orders);
 //app.use( '/auth', userq);
 app.use( '/auth', userq);
