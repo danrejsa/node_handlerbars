@@ -71,9 +71,9 @@ var store = new MongoDBStore({
 });
  
 // Catch errors
-store.on('error', function(error) {
+/*store.on('error', function(error) {
   console.log(error);
-});
+});*/
  
 app.use(require('express-session')({
   secret: 'This is a secret',
