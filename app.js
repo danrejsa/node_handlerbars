@@ -26,7 +26,7 @@ app.engine(
 
 const mongoose = require("mongoose");
 //const cloudinary = require('cloudinary').v2;
-mongoose.connect("mongodb://127.0.0.1:27017/automart", {
+mongoose.connect("mongodb+srv://danrejsa:" + process.env.MONGO_ATLAS_PW +"@danrej-ann6l.mongodb.net/test?retryWrites=true&w=majority", {
   useNewUrlParser: true
 });
  
@@ -65,7 +65,7 @@ const router = express.Router();
 
 
 var store = new MongoDBStore({
-  uri: "mongodb://127.0.0.1:27017/automart",
+  uri: "mongodb+srv://danrejsa:" + process.env.MONGO_ATLAS_PW +"@danrej-ann6l.mongodb.net/test?retryWrites=true&w=majority",
  //uri:"mongodb+srv://danrejsa:" + process.env.MONGO_ATLAS_PW +"@danrej-ann6l.mongodb.net/test?retryWrites=true&w=majority",
   collection: 'users'
 });
