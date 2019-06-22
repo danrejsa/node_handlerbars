@@ -37,7 +37,7 @@ const carApi = require("./api/car");
 const flagApi = require("./api/flag");
 const userApi = require("./api/users");
 //const orderApi = require("./api/order");
-//const Homepage = require("./routes/carsRoute");
+const Homepage = require("./routes/carsRoute");
 const orders = require("./routes/orderRoute");
 const userq = require("./routes/userRoute");
 //const flags = require("./routes/flagRoute");
@@ -63,9 +63,9 @@ const router = express.Router();
   resave:true
 }));*/
 
-app.get('/', (req,res){
+/*app.get('/', (req,res){
         res.send('Hell world');
- })
+ })*/
 
 var store = new MongoDBStore({
   uri: "mongodb+srv://danrejsa:" + process.env.MONGO_ATLAS_PW +"@danrej-ann6l.mongodb.net/test?retryWrites=true&w=majority",
@@ -128,7 +128,7 @@ app.use(passport.session());
   
 //app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 //app.use('/api/v1', router);
-//app.use( '/', Homepage);
+app.use( '/', Homepage);
 app.use( '/orders', orders);
 //app.use( '/auth', userq);
 app.use( '/auth', userq);
