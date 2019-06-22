@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Auto Mart</title>
+    <link href='/cssFiles/main.css' rel="stylesheet" />
+  </head>
+  <body>
+    <ul class='nav'>
+      <li class='nav-bar'><a id='home' href='/'>Auto Mart</a></li>      
+      <ul class='nav2'>
+          <li class='nav-bar'><a id='contact' href='/auth/login'>Login</a></li>
+          <li class='nav-bar' ><a class="active" id='about' href='/auth/register'>Register</a></li>
+      </ul>
+  </ul>
+    <h1 class='header-Reg' >Register</h1>
+    <form class="form" method="POST" action='/auth/register'>
+        <input class='reg-form' id="firstName" name="firstName" type="text" placeholder="First Name" required />
+        <input class='reg-form' id="lastName" name="lastName" type="text" placeholder="Last Name" required />
+        <input class='reg-form' id="address" name="address" type="text" placeholder="Address" required />
+        <input class='reg-form' id="email" name="email" type="email" placeholder="Email" required />
+        <input
+        class='reg-form'
+          id="password"
+          name="password"
+          type="password"
+          placeholder="Password"
+          required
+        />
+        
+        <div class="alreadyRegistered">
+          <span id='account'>Already registered? Click login</span>
+        </div>
+        <br />
+        <a href="/auth/login" id="loginR"
+          >Login</a
+        >
+        <button id="signUpR" type="submit" >Register</button>
+      </form>
+      <footer>
+          <div id='powered'>
+            <p tabIndex ='0'>Powered by Olaitan Auto Mart</p>
+            <p id='copyrights'>Copyright &copy; 2019. All rights reserved.</p>
+          </div>
+        </footer>
+   <script></script>
+  </body>
+</html>

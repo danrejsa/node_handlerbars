@@ -1,0 +1,28 @@
+<ul class='nav'>
+    <li class='nav-bar'><a id='home' href='/'>Auto Mart</a></li>
+    {{#if user}}
+    <ul class='nav2'>
+        <li class='nav-bar'><a id='login-link' href='/auth/logout'>logout</a></li>
+    </ul>
+    {{/if}}
+</ul>
+<h1 id='car-detail-header'>User Profile</h1>
+<article class='main-A'>
+    <div class='main-B'>
+        <img id='car-img' src="{{this.user.image_url}}" alt='image missing' />
+        <div class='main-content'><strong>User ID: &nbsp; </strong> {{this.user._id}}</div>
+        <div class='main-content'><strong>Username: &nbsp; </strong> {{this.user.username}}</div>
+        <div class='main-content'><strong>First Name: &nbsp;</strong><span> {{this.user.firstName}}</span></div>
+        <div class='main-content'><strong>Last Name: &nbsp; </strong> {{this.user.lastName}}</div>
+        <div class='main-content'><strong>Address: &nbsp; </strong> {{this.user.address}}</div>
+        <div class='main-content'><strong>Phone: &nbsp; </strong> {{this.user.phone}}</div>
+        <div class='main-content'><strong>Email: &nbsp;</strong><span> {{this.user.email}}</span></div>
+    </div>
+</article>
+
+<footer class='footer1'>
+    <div id='powered'>
+        <p tabIndex='0'>Powered by Olaitan Auto Mart</p>
+        <p id='copyrights'>Copyright &copy; 2019. All rights reserved.</p>
+    </div>
+</footer>

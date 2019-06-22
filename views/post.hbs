@@ -1,0 +1,116 @@
+<ul class='nav'>
+        <ul class='nav1'>
+            <li class='nav-bar'><a class="active" id='home' href='/auth/dashboard'>Auto Mart</a></li>
+        <li class='nav-bar'><a id='contact' href='contact'>Contact Us</a></li>
+        <li class='nav-bar'><a id='about' href='about'>About Us</a></li>
+        </ul>
+        <ul class='nav2'> 
+          {{#if user}}  
+            <li class='nav-bar'><a id='register-link'href='/auth/post'><i class="material-icons">
+drive_eta
+</i> &nbsp; SELL</a></li> 
+                     
+            
+ <li class='nav-bar'><a id='register-link' href='/auth/logout'>Logout</a></li>       
+  {{/if}}             
+        </ul>
+    </ul>
+             {{#if success_msg}}
+ <div class='alert alert-success'>{{success_msg}}</div>
+ {{/if}}
+ {{#if error_msg}}
+ <div class='alert alert-danger'>{{error_msg}}</div>
+ {{/if}}
+ {{#if error}}
+ <div class='alert alert-danger'>{{error}}</div>
+ {{/if}}
+    
+    
+    <div class='post-form'>
+            <h1 id='header-post'>Post a Car</h1>
+        <form class='post-a-car' method='POST' action='/auth/post' enctype="multipart/form-data">
+        <label class='labels'>Customer ID<span id='asterisk'>*</span></label>                  
+        <input class='post-a-car-details' id='car-details-A' name='customerId' >
+        <label class='labels'>Manufacturer<span id='asterisk'>*</span></label>  
+        <select  class='post-a-car-details' id='manufacturer' name='manufacturer'>
+                <option selected disabled>select</option>
+                <option value='Honda'>Honda</option>
+                <option value='Toyota' >Toyota</option>
+                <option value='Peugeot' >Peugeot</option>
+                <option value='Mercedes'>Mercedes</option>
+                <option value='Nissan' >Nissan</option>
+                <option value='Lexus' >Lexus</option> </select>
+        <label class='labels'>Body_Type<span id='asterisk'>*</span></label>  
+        <div class='post-a-car-details' id='car-type'>                   
+                   <input name='model' type='radio' value='Saloon'> Saloon 
+                   <input name='model' type='radio' value='Truck'> Truck
+                   <input name='model' type='radio' value='SUV'> SUV
+                   <input name='model' type='radio' value='Car'> Car
+        </div> 
+        <label class='labels'>Price<span id='asterisk'>*</span></label>                  
+        <input class='post-a-car-details' id='car-details-A' name='price' >
+        <label class='labels'>Year<span id='asterisk'>*</span></label>  
+        <input  class='post-a-car-details' id='car-details-C' name='year' >
+       
+        <label class='labels'>Transmission<span id='asterisk'>*</span></label>  
+        <select  class='post-a-car-details' id='car-details-E' name='transmission' >
+            <option selected disabled>select</option>
+            <option value='Automatic'>Automatic</option>
+            <option value='Manual' >Manual</option>           
+        </select>
+        <label class='labels'>Registered<span id='asterisk'>*</span></label>  
+        <div class='post-a-car-details' id='car-type'>                   
+                <input name='registered'  type='radio' value='Yes' > Yes
+                <input name='registered' type='radio' value='No' > No                               
+        </div>
+        <label class='labels'>License Plate<span id='asterisk'>*</span></label>  
+        <input  class='post-a-car-details' id='car-details-G' name='license' > 
+        <label class='labels'>Status<span id='asterisk'>*</span></label>
+        <div class='post-a-car-details' id='car-type'>                   
+                <input name='status' type='radio' value='Sold'> Sold
+                <input name='status' type='radio' value='Available'> Available                              
+        </div>
+        <label class='labels'>State<span id='asterisk'>*</span></label>
+        <div class='post-a-car-details' id='car-type'>                   
+                <input name='state' type='radio' value='New'> New
+                <input name='state' type='radio' value='Old'> Old
+                <input name='state' type='radio' value='Used'> Used               
+        </div>
+        <label class='labels'>Description<span id='asterisk'>*</span></label>  
+        <textarea  class='post-a-car-details' id='car-details-D' name='description' placeholder='Enter text here...'></textarea>
+               
+        <label class='labels'>Upload Car Image (Front, Rear, Back, Interior)<span id='asterisk'>*</span></label> 
+        <div class='car-images'>
+         <!-- <div class='car-image'> 
+                 <p class='car-text'><strong>Front View</strong></p>              
+                 <input  class='post-a-car-details' onchange="readURL(this);" type="file" accept="image/*"  name="image1" >
+                 
+                 <img class='blah' id="blah" src="../img/icon3.png" alt=""  />
+            </div>
+            <div class='car-image'>
+                 <p  class='car-text'><strong>Back View</strong></p>
+                 <input  class='post-a-car-details' onchange="readURL1(this);"   type="file"  accept="image/*" name="image2">
+                
+                 <img class='blah' id="blah1" src="../img/icon3.png" alt="" />
+            </div>-->
+            <div class='car-image'>                            
+                <input  class='post-a-car-details' onchange="readURL(this);"   type="file"  accept="image/*" name="image" />
+                <img class='blah' id="blah" src="../img/icon3.png" alt="" />
+            </div>
+            <!--<div class='car-image'>  
+                 <p class='car-text'><strong>Interior View
+                 </strong></p>              
+                <input  class='post-a-car-details' onchange="readURL3(this);"   type="file"  accept="image/*" name="image4" >
+                <img class='blah' id="blah3" src="#" alt=""  />
+            </div>-->
+        </div>
+
+        <input id='post-button' type='submit' value='submit'>
+    </form>
+    </div>
+    <footer class='footer1'>
+			<div id='powered'>
+				<p tabIndex ='0'>Powered by Olaitan Auto Mart</p>
+				<p id='copyrights'>Copyright &copy; 2019. All rights reserved.</p>
+			</div>
+    </footer>

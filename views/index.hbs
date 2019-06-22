@@ -1,0 +1,202 @@
+<ul class='nav'>
+        <ul class='nav1'>
+            <li class='nav-bar'><a class="active" id='home' href='/'>Auto Mart</a></li>
+        <li class='nav-bar'><a id='contact' href='contact'>Contact Us</a></li>
+        <li class='nav-bar'><a id='about' href='about'>About Us</a></li>
+        </ul>
+        <ul class='nav2'> 
+            
+               <li class='nav-bar'><a id='login-link' href='/auth/login'>Login</a></li>
+            <li class='nav-bar'><a id='register-link' href='/auth/register'>Register</a></li> 
+         
+            <li class='nav-bar'><a id='register-link'href='/auth/post'><i class="material-icons">
+drive_eta
+</i> &nbsp; SELL</a></li> 
+                     
+            
+                   
+                   
+            <!--<input type="text" placeholder="Search..">
+            <button id='search' type="submit">
+                <i class="material-icons">search</i>
+            </button>-->          
+        </ul>
+    </ul>
+    <marquee>Welcome to Olaitan Auto Mart........For best deals, you can contact us on +234 6894038382, +234 574683828.
+        You can also email us at olaitan@automart.com.</marquee>
+
+    <div class='slides'>
+        
+        <div class='slider' id='slide-left'></div>        
+        <div class='sliderC' id='slide-center'>
+                {{# each items}}
+            <img class='slide-img' src="{{this.image_url}}">          
+               {{/each}}
+        </div>
+     
+        <div class='slider' id='slide-right'>
+            <h2>Filter Car</h2>
+            <form class='filter' method='post' action='/auth/login'>
+                <label class='labels'>Car Make<span id='asterisk'>*</span></label>
+                <select class='filter-query' id='filter-car-make'>
+                    <option selected disabled>select</option>
+                    <option value='A'>Honda</option>
+                    <option value='B'>Toyota</option>
+                    <option value='C'>Peugeot</option>
+                    <option value='A'>Mercedes</option>
+                    <option value='B'>Nissan</option>
+                    <option value='C'>Lexus</option>
+                </select>
+
+                <label class='labels'>Condition<span id='asterisk'>*</span></label>
+                <div class='post-a-car-details' id='car-type'>
+                    <input name='C' type='radio'> New
+                    <input name='C' type='radio'> Fairly Used
+                    <input name='C' type='radio'> Used
+                </div>
+
+                <label class='labels'>Price Range ($)<span id='asterisk'>*</span></label>
+                <select class='filter-query' id='filter-car-make'>
+                    <option selected disabled>select</option>
+                    <option value='A'>0 - 1000</option>
+                    <option value='B'>1001 - 10000</option>
+                    <option value='C'>10001 - 20000</option>
+                    <option value='D'>20001 - 30000</option>
+                    <option value='E'>30001 - 40000</option>
+                    <option value='F'>40001 - 50000</option>
+                </select>
+                <input id='filter-button' type='submit' value='search'>
+            </form>
+        </div>
+    </div>
+
+    <!--<div class='container'>
+        <div class='container2'>
+            <img id='car-img' src='./img/car1.jpg' alt='missing image'>
+            <p>
+                <strong>Price:</strong><span>&nbsp;
+                    <a id='car-price' href='editPrice'>$ 10,000</a></span>
+                <span class='buy-now' id='buy-now1'>Buy now</span>
+            </p>
+            <a id='view-detail' href='detail'><em>View details</em></a>
+            <a id='view-detail' href='report'><em id='report'>Report this ad!</em></a>
+        </div>
+        <div class='container2'> <img id='car-img' src='./img/car2.jpg' alt='missing image'>
+            <p>
+                <strong>Price:</strong><span>&nbsp;
+                    <a id='car-price' href='editPrice'>$ 6,000</a></span>
+                <span class='buy-now' id='buy-now2'>Buy now</span>
+            </p>
+            <a id='view-detail' href='detail'><em>View details</em></a>
+            <a id='view-detail' href='report'><em id='report'>Report this ad!</em></a>
+        </div>
+        <div class='container2'> <img id='car-img' src='./img/car3.jpg' alt='missing image'>
+            <p>
+                <strong>Price:</strong>
+                <span>&nbsp; <a id='car-price' href='editPrice'>$ 17,000</a></span>
+                <span class='buy-now' id='buy-now3'>Buy now</span>
+            </p>
+            <a id='view-detail' href='detail'><em>View details</em></a>
+            <a id='view-detail' href='report'><em id='report'>Report this ad!</em></a>
+        </div>
+        <div class='container2'> <img id='car-img' src='./img/car4.jpg' alt='missing image'>
+            <p>
+                <strong>Price:</strong>
+                <span>&nbsp; <a id='car-price' href='editPrice'>$ 10,000</a></span>
+                <span class='buy-now' id='buy-now4'>Buy now</span>
+            </p>
+            <a id='view-detail' href='detail'><em>View details</em></a>
+            <a id='view-detail' href='report'><em id='report'>Report this ad!</em></a>
+        </div>
+        <div class='container2'> <img id='car-img' src='./img/car6.jpg' alt='missing image'>
+            <p>
+                <strong>Price:</strong>
+                <span>&nbsp; <a id='car-price' href='editPrice'>$ 22,000</a></span>
+                <span class='buy-now' id='buy-now5'>Buy now</span>
+            </p>
+            <a id='view-detail' href='detail'><em>View details</em></a>
+            <a id='view-detail' href='report'><em id='report'>Report this ad!</em></a>
+        </div>
+        <div class='container2'> <img id='car-img' src='./img/car2.jpg' alt='missing image'>
+            <p>
+                <strong>Price:</strong>
+                <span>&nbsp; <a id='car-price' href='editPrice'>$ 7,000</a></span>
+                <span class='buy-now' id='buy-now6'>Buy now</span>
+            </p>
+            <a id='view-detail' href='detail'><em>View details</em></a>
+            <a id='view-detail' href='report'><em id='report'>Report this ad!</em></a>
+        </div>
+        <div class='container2'> <img id='car-img' src='./img/car3.jpg' alt='missing image'>
+            <p>
+                <strong>Price:</strong>
+                <span>&nbsp; <a id='car-price' href='editPrice'>$ 16,500</a></span>
+                <span class='buy-now' id='buy-now7'>Buy now</span>
+            </p>
+            <a id='view-detail' href='detail'><em>View details</em></a>
+            <a id='view-detail' href='report'><em id='report'>Report this ad!</em></a>
+        </div>
+        <div class='container2'> <img id='car-img' src='./img/car7.jpg' alt='missing image'>
+            <p>
+                <strong>Price:</strong>
+                <span>&nbsp; <a id='car-price' href='editPrice'>$ 13,000</a></span>
+                <span class='buy-now' id='buy-now8'>Buy now</span>
+            </p>
+            <a id='view-detail' href='detail'><em>View details</em></a>
+            <a id='view-detail' href='report'><em id='report'>Report this ad!</em></a>
+        </div>
+        <div class='container2'> <img id='car-img' src='./img/car8.png' alt='missing image'>
+            <p>
+                <strong>Price:</strong>
+                <span>&nbsp; <a id='car-price' href='editPrice'>$ 11,000</a></span>
+                <span class='buy-now' id='buy-now9'>Buy now</span>
+            </p>
+            <a id='view-detail' href='detail'><em>View details</em></a>
+            <a id='view-detail' href='report'><em id='report'>Report this ad!</em></a>
+        </div>
+    </div>-->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id='close-buy'>&times;</span>
+            <p>You need to login before you can make transactions. Please click <a href='/auth/login'>here</a> to login
+            </p>
+        </div>
+    </div>
+   
+        {{# each items}}
+       <article class='main-A'>  
+           <div class='main-B'>   
+        <img id='car-img' src="{{this.image_url}}" alt='image missing'    />   
+        <div class='main-content'><strong>Manufacturer: &nbsp;</strong> {{this.manufacturer}}</div>
+        <div class='main-content'><strong>Price: &nbsp; </strong> {{this.price}}</div>
+        <!-- <div class='main-content'><strong>Status: &nbsp; </strong>{{this.status}}</div>
+        <div class='main-content'><strong>State: &nbsp; </strong> {{this.state}}</div>  
+       <div class='main-content'><strong>Year: &nbsp; </strong> {{this.year}}</div>
+        <div class='main-content'><strong>Transmission: &nbsp; </strong> {{this.transmission}}</div>
+         <div class='main-content'><strong>Registered: &nbsp; </strong> {{this.registered}}</div>
+        <div class='main-content'><strong>License: &nbsp; </strong> {{this.license}}</div>
+        <div class='main-content'><strong>Description: &nbsp; </strong> {{this.description}}</div>-->
+        <div class='main-content'><strong>Model: &nbsp; </strong> {{this.model}}</div>
+        <!--<div class='main-content'><strong>Image_url: &nbsp; </strong> {{this.image_url}}</div>-->
+          <!--<form  action='/detail/{{this._id}}' method='GET'>
+        <button class="btn btn-danger btn-block mt-4">Delete</button>
+           
+         </form>-->
+          
+       <a id='view-detail'href='./auth/detail/{{this._id}}'>View details</a>
+         <span class='buy-now' id='buy-now'><a style='color:wheat' href='/auth/login'>Buy now</a></span>         
+             <em class='flagger' id='flagger' > <a style="color:red; float:right; cursor:pointer;margin-right:10px" href='/auth/report'>Report this ad!</a></em>
+            <!--<p class='buy-now' id='buy-now2'>Buy now</p>-->
+        </div>
+       </article>
+        {{/ each}}
+
+     
+
+        <footer class='footer1'>
+        <div id='powered'>
+            <p tabIndex='0'>Powered by Olaitan Auto Mart</p>
+            <p id='copyrights'>Copyright &copy; 2019. All rights reserved.</p>
+        </div>
+        <div>        
+    </div>
+    </footer>

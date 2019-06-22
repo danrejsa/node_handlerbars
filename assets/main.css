@@ -1,0 +1,1257 @@
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 5px;    
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: scroll; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  .modal2 {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  .car-text{
+      font-style: italic;
+      font-size: 13px;
+      margin-bottom: 0;
+      color:#333;
+      width:60%;
+     margin-left:16px;
+     text-align: center;
+      background-color:#fff
+      
+  }
+ 
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #333;
+    width: 50%;
+    display:flex;   
+  }
+  
+  
+
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+
+/*Admin*/
+
+.admin-main{
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+}
+#admin-panel-left{
+    width:25%;
+    height:630px;
+    background:#333;    
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+    color:#fff;
+    text-align: center
+}
+table {
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  table, th, td {
+    border: 1px solid #333;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  table#t01 tr:nth-child(even) {
+    background-color: #eee;
+  }
+  table#t01 tr:nth-child(odd) {
+   background-color: #fff;
+  }
+  table#t01 th {
+    background-color: #333;
+    color: white;
+  }
+.admin-activity a{    
+    color:#fff;
+   font-size:22px;
+   text-decoration: none;
+}
+#admin-panel-right{
+    width:75%;
+    height:630px;
+    background:wheat;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+    color:#333;    
+    text-align: center;
+}
+.admin-activity{
+    width:100%;
+    margin-top:2rem;
+    font-size:20px;
+}
+
+/*Index*/
+.nav {
+    text-decoration: none;
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    background-color:#333;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+}
+#report{
+float:right;
+margin-right:5px;
+color:red;
+}
+.buy-now{
+    padding:3px;
+    margin-right:9px;
+    float:right;
+    border: 1px solid #fff;
+    border-radius:5px;
+    cursor:pointer;
+}
+.buy-now3{  
+       
+    border: 1px solid #fff;
+    border-radius:5px;
+    cursor:pointer;
+}
+.buy-now2{
+    padding:3px;
+    margin-right:9px;
+    float:right;
+    border: 1px solid #fff;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+#powered{
+	width:100%;
+	text-align: center;
+	color:#fff;
+	font-size:12px;
+}
+
+.slide-img {
+	display:none;
+	width:100%;
+	height:500px;
+}
+.footer1{
+	width:100%;
+	height:80px;
+    border-top: 5px solid darkred;
+    background:#333;	
+	position:relative;
+	bottom: 0px;
+  	left: 0;
+      right: 0;
+      margin-top:1rem;  
+}
+
+.footer2{
+	width:100%;
+	height:80px;
+    border-top: 5px solid darkred;
+    background:#333;	
+	position:fixed;
+	bottom: 0px;
+  	left: 0;
+  	right: 0;
+  	overflow-x:hidden;
+}
+html{
+    overflow-x:hidden;
+    overflow-y:scroll;
+    
+}
+
+.nav2 {
+    float:right;
+    overflow:hidden;
+    text-decoration: none;
+}
+.nav-bar {
+    float:left;
+    text-decoration: none;
+}
+.nav-bar2 {
+    float:right;
+    text-decoration: none;
+}
+.nav-bar a {
+    text-decoration: none;
+    display:block;
+    text-align: center;
+    color:white;
+    padding: 14px 16px;
+
+}
+.nav-bar2 a {
+    text-decoration: none;
+    display:block;
+    text-align: center;
+    color:white;
+    padding: 14px 16px;
+
+}
+
+.nav-bar a:hover {
+background-color: #111;
+text-decoration: none
+}
+.slides{
+    width: 60%;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+.slides{
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:3rem;
+    margin-top:1.5rem;
+}
+
+.slider{
+    width: 20%;
+    color:white;
+    height:500px;
+    background:#333;
+    padding:3px;
+    margin:8px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#slide-center{
+    width: 50%;
+    height:500px;
+
+    padding:3px;
+    margin:8px;   
+    margin-left:auto;
+    margin-right:auto;
+}
+.container{
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+.active {
+    background-color: #2196F3;
+    color: white;
+    text-decoration: none
+  }
+  #search:hover {
+    background: #ccc;
+  }
+  #search {  
+    margin-bottom:0px;
+    height:32px;
+    cursor: pointer;
+    background: #ddd;  
+    cursor: pointer;
+    margin-right:16px;
+        
+  }
+
+  #sellBtn{      
+    margin-right: 16px;
+    padding: 4px 8px;
+    height:32px;
+    cursor: pointer;    
+    text-decoration: none;
+  }
+.nav2 input[type=text] {    
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 6px;
+    font-size: 17px;
+  }
+  #slide-img{
+      width:100%;
+        height:100%;
+        overflow:hidden;
+  }
+  #car-img{
+      width:100%;
+      margin-left:auto;
+      margin-right:auto;
+      height:170px;      
+  }
+  #view-detail{
+      color:#2196F3;
+      margin-left:10px;
+  }
+.container2{
+    color:white;
+    width: 30%;
+    height:250px;
+    background:#333;
+    padding:3px;
+    margin:8px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#car-price{
+    color:green;
+    text-decoration: none;
+}
+
+/*Post A Car */
+.post-a-car{
+    width: 60%;
+    color:white;
+    display:flex;
+    flex-wrap: wrap;
+    margin-left:auto;
+    margin-right:auto;
+}
+.report-a-car{
+    width: 60%;
+    color:white;
+    display:flex;
+    flex-wrap: wrap;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#asterisk{
+    color:red;
+    font-size:16px;
+    margin-right:2px;
+    padding:0
+}
+.header-post{
+    margin-left: 45%;
+    font-weight:bold;
+    margin-top:5rem;
+    margin-bottom:2rem;
+}
+
+#header-post{
+    margin-left: 37%;
+    font-weight:bold;
+    margin-top:5rem;
+    color:#fff
+}
+.post-a-car-details{
+    width: 100%;
+    margin-top:0.5rem; 
+    padding: 8px 10px;   
+    
+}
+.post-a-car-details2{
+    width: 100%;
+    margin-top:5px; 
+    padding: 6px 8px;   
+    
+}
+.filter-query{
+    width:90%;
+    padding:8px 10px;
+    margin-bottom:1rem;
+}
+
+#report-header{
+    margin-left:40%;
+    margin-top:3rem;
+    margin-bottom: 2rem;
+}
+#post-button{
+    width: 100px;
+    margin-top:6rem;
+    padding:3px;  
+    border-radius:5px;
+    background: #2196F3;
+    color:#fff;
+    margin-bottom:1rem;
+    float:right;
+}
+
+#buy-button{
+    width: 100px;
+  float:right;
+    padding:3px;  
+    margin-top:7px;
+    border-radius:5px;
+    background: #2196F3;
+    color:#fff;
+}
+
+#report-button{
+    width: 100px;
+    margin-top:3.5rem;
+    padding:3px;  
+    border-radius:5px;
+    background: #2196F3;
+    color:#fff;
+}
+
+#filter-button{
+    width: 100px;
+    margin-top:1.5rem;
+    padding:3px;  
+    border-radius:5px;
+    background: #2196F3;
+    color:#fff;
+}
+/*.main-A{
+    width:80%;
+    padding:20px 25px;
+    background:#333;
+    overflow: hidden;
+    display:block;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top:1rem;
+    border-radius:6px;    
+}*/
+.main-content{
+margin-left:10px;
+}
+#car-img{
+    margin-top:1rem;
+    margin-left:22px;
+    width:350px;
+    height:200px;
+}
+
+.main-A{
+    width:32%;
+    display:inline-block;   
+}
+.main-B{    
+    color:#fff;    
+    background: #333;
+   height:350px;
+   margin-left: 35px;
+   margin-top:2rem
+
+}
+.main-B2{    
+    width:300px;   
+   color: #333;
+   height:100%;
+   margin-left: 35px;
+   margin-top:2rem
+
+}
+
+.nav1{
+    width:70%;
+}
+
+.car-images{
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    margin-top:1rem;
+}
+.car-images2{
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+ margin-top:0.2rem;
+}
+.blah{
+    margin:7px;
+    margin-top:1.5rem;
+}
+
+.car-image{
+   
+    width:50%;
+    height:100px;  
+    
+}
+.post-form{
+    width:60%;
+    margin-left:auto;
+    margin-right:auto;
+    background: #333;
+    height:100%;    
+    border-radius:5px;
+}
+.post-report{
+    width:60%;
+    margin-left:auto;
+    margin-right:auto;
+    background: #333;
+    height:650px;
+    border-radius:5px;
+    margin-bottom: 3rem;
+}
+.post-edit-price{
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    background: #333;
+    height:250px;
+    border-radius:5px;
+}
+#check-sold-item{
+    margin-top:0.5rem;
+}
+#car-details-D{
+    height:100px;
+}
+
+
+/*login & Register*/
+.nav{
+    padding: 16px 18px;
+    background: #333
+}
+.form{
+    width:40%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:16px;
+}
+.contact-form{
+    width:60%;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:16px;
+    background:#333;
+    border-radius:6px;
+}
+#car-type{
+    padding:5px;
+    text-align: left;
+
+}
+#log-label{
+    margin-left: 5%;
+    
+}
+#checkbox{
+    width:100%;
+    margin-top:1rem;
+}
+.reg-form{
+    width: 88%;
+    border-radius: 6px;
+    border: 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px 14px;
+    margin-top:2rem;
+}
+.reg-form2{
+    width: 88%;        
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    margin-top:0;
+}
+.log-form{
+    width: 88%;
+    border-radius: 6px;
+    border: 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px 14px;
+    margin-top:2rem;
+}
+/*#name{
+    width: 88%;
+    border-radius: 6px;
+    border: 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px 14px;
+    margin-top:2rem;
+}
+#password{
+    width: 88%;
+    border-radius: 6px;
+    border: 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px 14px;
+}*/
+.header-log{
+    margin-left: 45%;
+    font-weight:bold;
+    margin-top:8rem;
+}
+.header-Reg{
+    margin-left: 45%;
+    font-weight:bold;
+    margin-top:1rem;
+}
+#password{
+    margin-top: 1.5rem
+}
+#login:hover{
+    background:green;
+}
+#signUp:hover{
+    background:green;
+}
+#loginR:hover{
+    background:green;
+}
+#signUpR:hover{
+    background:green;
+}
+#login{
+    padding:3px;
+    width:100px;
+    background:#fff;
+    border: 2px solid #333;
+    color:black;
+    margin-left: 28%;
+    font-size:18px;
+    border-radius:6px;
+    margin-top:1.5rem;
+}
+#signUp{
+    margin-left: 1.5rem;
+    padding:3px;
+    width:100px;
+    background:grey;    
+    font-size:18px;    
+    border-radius:6px;
+    color:black;
+    text-align: center;
+    text-decoration: none;
+    margin-top:1.5rem;
+    font-size:20px;
+}
+.alreadyRegistered{
+    width:100%;
+    margin-top:1rem;
+}
+#account{  
+    font-style: italic;
+     margin-left:5%;
+  }
+
+#signUpR{
+    padding:3px;
+    width:100px;
+    background:#fff;    
+    font-size:18px;    
+    border-radius:6px;
+    color:black;
+    margin-left: 2rem;
+    margin-top:1.5rem;
+}
+#loginR{
+    padding:3px;
+    width:100px;
+    background:grey;
+    border: 2px solid #333;
+    color:black;
+    font-size:20px;
+    margin-left:5%;
+    text-decoration: none;
+    border-radius:6px;
+    margin-top:1.5rem;
+    text-align: center;
+}
+
+#car-detail-header{
+    margin-top:2rem;
+}
+
+.detail-content{    
+    margin-left:10px;
+    
+}
+
+
+@media only screen and (max-width : 998px) {
+  
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 5px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+ 
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #333;
+    width: 50%;   
+  }
+  
+
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+
+/*Admin*/
+
+.admin-main{
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+}
+#admin-panel-left{
+    width:25%;
+    height:630px;
+    background:#333;    
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+    color:#fff;
+    text-align: center
+}
+table {
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  table, th, td {
+    border: 1px solid #333;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  table#t01 tr:nth-child(even) {
+    background-color: #eee;
+  }
+  table#t01 tr:nth-child(odd) {
+   background-color: #fff;
+  }
+  table#t01 th {
+    background-color: #333;
+    color: white;
+  }
+.admin-activity a{    
+    color:#fff;
+   font-size:22px;
+   text-decoration: none;
+}
+#admin-panel-right{
+    width:75%;
+    height:630px;
+    background:wheat;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+    color:#333;    
+    text-align: center;
+}
+.admin-activity{
+    width:100%;
+    margin-top:2rem;
+    font-size:20px;
+}
+
+/*Index*/
+.nav {
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    background-color:#333;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+}
+#report{
+margin-right:10px;
+float:right;
+color:red;
+}
+
+#flagger{
+    margin-right:10px;
+    float:right;
+    color:red;
+    }
+
+.buy-now{
+    padding:3px;
+    margin-right:9px;
+    float:right;
+    border: 1px solid #fff;
+    border-radius:5px;
+    cursor:pointer;
+}
+#buy-now-detail{
+    padding:3px;
+    margin-right:9px;
+    float:right;
+    border: 1px solid #333;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+#powered{
+	width:100%;
+	text-align: center;
+	color:#fff;
+	font-size:12px;
+}
+
+.slide-img {
+	display:none;
+	width:100%;
+	height:500px;
+}
+.footer1{
+	width:100%;
+	height:80px;
+    border-top: 5px solid darkred;
+    background:#333;	
+	position:relative;
+	bottom: 0px;
+  	left: 0;
+      right: 0;
+      margin-top:1rem;  
+}
+
+.footer2{
+	width:100%;
+	height:80px;
+    border-top: 5px solid darkred;
+    background:#333;	
+	position:fixed;
+	bottom: 0px;
+  	left: 0;
+  	right: 0;
+  	overflow-x:hidden;
+}
+html{
+    overflow-x:hidden;
+    overflow-y:scroll;
+    
+}
+
+.nav2 {
+    width:40%;
+    float:right;
+    overflow:hidden;
+    text-decoration: none;
+}
+.nav-bar {
+    float:left;
+    text-decoration: none;
+}
+.nav-bar a {
+    text-decoration: none;
+    display:block;
+    text-align: center;
+    color:white;
+    padding: 14px 16px;
+
+}
+
+.nav-bar a:hover {
+background-color: #111;
+text-decoration: none;
+}
+.slides{
+    width: 60%;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+.slides{
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:3rem;
+    margin-top:1.5rem;
+}
+
+.slider{
+    width: 20%;
+    color:white;
+    height:500px;
+    background:#333;
+    padding:3px;
+    margin:8px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#slide-center{
+    width: 50%;
+    height:500px;
+
+    padding:3px;
+    margin:8px;
+    
+    margin-left:auto;
+    margin-right:auto;
+}
+.container{
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+.active {
+    background-color: #2196F3;
+    color: white;
+  }
+  #search:hover {
+    background: #ccc;
+  }
+  #search {  
+    margin-bottom:0px;
+    height:32px;
+    cursor: pointer;
+    background: #ddd;  
+    cursor: pointer;
+    margin-right:16px;
+        
+  }
+
+  #sellBtn{      
+    margin-right: 16px;
+    padding: 4px 8px;
+    height:32px;
+    cursor: pointer;    
+    text-decoration: none;
+  }
+.nav2 input[type=text] {    
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 6px;
+    font-size: 17px;
+  }
+  #slide-img{
+      width:100%;
+        height:100%;
+        overflow:hidden;
+  }
+  #car-img{
+      width:100%;
+      margin-left:auto;
+      margin-right:auto;
+      height:170px;      
+  }
+  #car-img22{
+    width:30%;
+    margin-left:auto;
+    margin-right:auto;
+    height:170px;      
+}
+ 
+.container2{
+    color:white;
+    width: 30%;
+    height:250px;
+    background:#333;
+    padding:3px;
+    margin:8px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#car-price{
+    color:green;
+    text-decoration: none;
+}
+
+/*Post A Car */
+.post-a-car{
+    width: 60%;
+    color:white;
+    display:flex;
+    flex-wrap: wrap;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#asterisk{
+    color:red;
+    font-size:16px;
+    margin-right:2px;
+    padding:0
+}
+.header-post{
+    margin-left: 45%;
+    font-weight:bold;
+    margin-top:5rem;
+}
+.post-a-car-details{
+    width: 100%;
+    margin-top:0.5rem; 
+    padding: 14px 16px;   
+    
+}
+.filter-query{
+    width:90%;
+    padding:8px 10px;
+    margin-bottom:1rem;
+}
+.labels{
+    margin-top:1rem;
+}
+.labels2{
+    margin-top:1rem;
+}
+
+
+#filter-button{
+    width: 100px;
+    margin-top:1.5rem;
+    padding:3px;  
+    border-radius:5px;
+    background: #2196F3;
+    color:#fff;
+}
+
+.car-images{
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+ margin-top:1rem;
+}
+.blah{
+    margin:7px;
+    margin-top:1rem;
+}
+.car-image{
+   
+    width:25%;
+    height:100px;  
+    
+}
+
+.post-report{
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    background: #333;
+    height:470px;
+    border-radius:5px;
+}
+.post-edit-price{
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    background: #333;
+    height:250px;
+    border-radius:5px;
+}
+#check-sold-item{
+    margin-top:0.5rem;
+}
+#car-details-D{
+    height:100px;
+}
+
+
+/*login & Register*/
+.nav{
+    padding: 16px 18px;
+    background: #333
+}
+.form{
+    width:40%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:16px;
+}
+.contact-form{
+    width:60%;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:16px;
+    background:#333;
+    border-radius:6px;
+}
+#car-type{
+    padding:5px;
+    text-align: left;
+
+}
+#log-label{
+    margin-left: 5%;
+    
+}
+#checkbox{
+    width:100%;
+    margin-top:1rem;
+}
+#name{
+    width: 88%;
+    border-radius: 6px;
+    border: 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px 14px;
+    margin-top:2rem;
+}
+#password{
+    width: 88%;
+    border-radius: 6px;
+    border: 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px 14px;
+}
+.header-log{
+    margin-left: 45%;
+    font-weight:bold;
+    margin-top:10rem;
+}
+#password{
+    margin-top: 1.5rem
+}
+#login:hover{
+    background:green;
+}
+#signUp:hover{
+    background:green;
+}
+#loginR:hover{
+    background:green;
+}
+#signUpR:hover{
+    background:green;
+}
+#login{
+    padding:3px;
+    width:100px;
+    background:#fff;
+    border: 2px solid #333;
+    color:black;
+    margin-left: 28%;
+    font-size:18px;
+    border-radius:6px;
+    margin-top:1.5rem;
+}
+#signUp{
+    margin-left: 1.5rem;
+    padding:3px;
+    width:100px;
+    background:grey;    
+    font-size:18px;    
+    border-radius:6px;
+    color:black;
+    text-align: center;
+    text-decoration: none;
+    margin-top:1.5rem;
+    font-size:20px;
+}
+.alreadyRegistered{
+    width:100%;
+    margin-top:1rem;
+}
+#account{  
+    font-style: italic;
+     margin-left:5%;
+  }
+
+#signUpR{
+    padding:3px;
+    width:100px;
+    background:#fff;    
+    font-size:18px;    
+    border-radius:6px;
+    color:black;
+    margin-left: 2rem;
+    margin-top:1.5rem;
+}
+#loginR{
+    padding:3px;
+    width:100px;
+    background:grey;
+    border: 2px solid #333;
+    color:black;
+    font-size:20px;
+    margin-left:5%;
+    text-decoration: none;
+    border-radius:6px;
+    margin-top:1.5rem;
+    text-align: center;
+}
+
+    }
+

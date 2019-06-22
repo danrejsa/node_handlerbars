@@ -1,0 +1,45 @@
+<ul class='nav'>
+        <ul class='nav1'>
+            <li class='nav-bar'><a class="active" id='home' href='/auth/dashbaord'>Auto Mart</a></li>
+        <li class='nav-bar'><a id='contact' href='contact'>Contact Us</a></li>
+        <li class='nav-bar'><a id='about' href='about'>About Us</a></li>
+        </ul>
+        <ul class='nav2'> 
+          {{#if user}}  
+            <li class='nav-bar'><a id='register-link'href='/auth/post'><i class="material-icons">
+drive_eta
+</i> &nbsp; SELL</a></li> 
+                     
+            <div class='nav-bar' id='view_profile'><a id='login-link' style='cursor:pointer;color:antiquewhite'><i class="material-icons">
+perm_identity
+</i> &nbsp; View Profile</a></div>  
+ <li class='nav-bar'><a id='register-link' href='/auth/logout'>Logout</a></li>       
+  {{/if}}             
+        </ul>
+    </ul>
+             {{#if success_msg}}
+ <div class='alert alert-success'>{{success_msg}}</div>
+ {{/if}}
+ {{#if error_msg}}
+ <div class='alert alert-danger'>{{error_msg}}</div>
+ {{/if}}
+ {{#if error}}
+ <div class='alert alert-danger'>{{error}}</div>
+ {{/if}}
+    <h1 id='report-header'>Report a Car</h1>
+    <div class='post-report'>
+            <form class='report-a-car' method='POST' action='/report'>             
+            <label class='labels'>Name<span id='asterisk'>*</span></label>            
+            <input  class='post-a-car-details' id='car-details-G' name='reporter' type='text' >
+             <label class='labels'>Transaction ID (Check car details for this ID)<span id='asterisk'>*</span></label>                  
+            <input class='post-a-car-details' id='car-details-A' name='transactionId' >  
+            <label class='labels'>Email<span id='asterisk'>*</span></label>  
+            <input  class='post-a-car-details' id='car-details-G' name='reportEmail' type='text' >
+            <label class='labels'>Reason for report<span id='asterisk'>*</span></label>  
+            <input  class='post-a-car-details' id='car-details-G' name='reportReason' type='text' >                  
+            <label class='labels'>Description<span id='asterisk'>*</span></label>  
+            <textarea  class='post-a-car-details' id='car-details-D' name='reportFlag' placeholder='Enter text here '></textarea>   
+            <input id='report-button' type='submit' value='submit'>
+        </form>
+        </div>
+        

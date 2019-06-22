@@ -1,0 +1,412 @@
+{
+    "swagger": "2.0",
+    "info": {
+       "version": "0.0.1",
+       "title": "AutoMart-API"
+    },
+    "host": "localhost:8000",
+    "basePath": "/",
+    "schemes": [
+       "http",
+       "https"
+    ],
+    "consumes": [
+       "application/json"
+    ],
+    "produces": [
+       "application/json"
+    ],
+
+
+
+    
+    "paths": {
+      
+       "/cars": {          
+          "x-swagger-router-controller": "cars",
+          "post":{
+             "summary":"Post Cars",
+            "description": "Uploads 'cars' to the caller",
+            "operationId": "postCars",
+            "parameters": [
+               {
+                  "name": "id",
+                  "in": "path",
+                 
+                  "required": false,
+                  "type": "integer"              
+               },
+               {
+                  "name": "owner",
+                  "in": "path",
+                 
+                  "required": false,
+                  "type": "integer"                   
+               },
+               {
+                  "name": "created_on",
+                  "in": "path",
+                  
+                  "required": false,
+                  "type": "string"               
+                  
+               },
+               {
+                  "name": "status",
+                  "in": "path",
+                  
+                  "required": false,
+                  "type": "string"               
+                  
+               },
+               {
+                  "name": "state",
+                  "in": "path",
+                 
+                  "required": false,
+                  "type": "string"               
+                  
+               },
+               {
+                  "name": "price",
+                  "in": "path",
+                  
+                  "required": false,
+                  "type": "integer"               
+                  
+               },
+               {
+                  "name": "manufacturer",
+                  "in": "path",
+            
+                  "required": false,
+                  "type": "string"               
+                  
+               },
+               {
+                  "name": "model",
+                  "in": "path",
+                  
+                  "required": false,
+                  "type": "string"               
+                  
+               },
+               {
+                  "name": "body_type",
+                  "in": "path",
+                  
+                  "required": false,
+                  "type": "string"               
+                  
+               }
+            ],
+            "responses": {
+               "201": {
+                  "description": "Success",
+                  "message": "Car Uploaded"                    
+               },
+               "default": {
+                  "description": "Error",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorResponse"
+                  }
+               }
+            }
+          },
+          "patch":{
+            "summary":"Update Cars",
+            "description": "Updates 'cars' to the caller",
+            "operationId": "patchCars",
+            "parameters": [
+               {
+                  "name": "id",
+                  "in": "path",
+                  
+                  "required": false,
+                  "type": "integer"              
+               },
+               {
+                  "name": "status",
+                  "in": "path",
+                 
+                  "required": false,
+                  "type": "string"               
+                  
+               },
+              
+               {
+                  "name": "price",
+                  "in": "path",
+                 
+                  "required": false,
+                  "type": "integer"               
+                  
+               }
+            ]
+          },
+          "delete":{
+            "summary":"P Cars",
+            "description": "Deletes 'cars' to the caller",
+            "operationId": "deleteCar",
+            "parameters": [
+               {
+                  "name": "id",
+                  "in": "path",
+                  
+                  "required": false,
+                  "type": "integer"              
+               }
+            ]
+          },
+         
+       "get": {
+         "description": "Returns 'all cars' to the caller",
+         "operationId": "getCars",
+         "parameters": [               
+         ],
+         "responses": {
+            "200": {
+               "description": "Success"                   
+            },
+            "default": {
+               "description": "Error",
+               "schema": {
+                  "$ref": "#/definitions/ErrorResponse"
+               }
+            }
+         
+         }
+      }
+   },
+       "/flags": {
+         "x-swagger-router-controller": "flags",
+         "post":{
+           "description": "Uploads 'cars' to the caller",
+           "operationId": "postFlags",
+           "parameters": [
+            {
+               "name": "id",
+               "in": "path",
+               
+               "required": false,
+               "type": "integer"              
+            },
+            {
+               "name": "car_id",
+               "in": "path",
+              
+               "required": false,
+               "type": "integer"               
+               
+            },
+            {
+               "name": "created_on",
+               "in": "path",
+              
+               "required": false,
+               "type": "string"               
+               
+            },
+           
+            {
+               "name": "reason",
+               "in": "path",
+              
+               "required": false,
+               "type": "string"               
+               
+            } ,
+            {
+               "name": "description",
+               "in": "path",
+              
+               "required": false,
+               "type": "string"               
+               
+            }     
+                 
+            ],
+            "responses": {
+               "200": {
+                  "description": "Success"                  
+               },
+               "default": {
+                  "description": "Error",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorResponse"
+                  }
+               }
+            }}
+         
+      },
+      "/orders": {
+         "x-swagger-router-controller": "orders",
+         "post":{
+            "summary":"Post Cars",
+           "description": "Uploads 'cars' to the caller",
+           "operationId": "postCars",
+           "parameters": [
+              {
+                 "name": "id",
+                 "in": "path",
+                
+                 "required": false,
+                 "type": "integer"              
+              },
+              {
+                 "name": "owner",
+                 "in": "path",
+                
+                 "required": false,
+                 "type": "integer"                   
+              },
+              {
+                 "name": "created_on",
+                 "in": "path",
+                 
+                 "required": false,
+                 "type": "string"               
+                 
+              },
+              {
+                 "name": "status",
+                 "in": "path",
+                 
+                 "required": false,
+                 "type": "string"               
+                 
+              },
+              {
+                 "name": "state",
+                 "in": "path",
+                
+                 "required": false,
+                 "type": "string"               
+                 
+              },
+              {
+                 "name": "price",
+                 "in": "path",
+                 
+                 "required": false,
+                 "type": "integer"               
+                 
+              },
+              {
+                 "name": "manufacturer",
+                 "in": "path",
+           
+                 "required": false,
+                 "type": "string"               
+                 
+              },
+              {
+                 "name": "model",
+                 "in": "path",
+                 
+                 "required": false,
+                 "type": "string"               
+                 
+              },
+              {
+                 "name": "body_type",
+                 "in": "path",
+                 
+                 "required": false,
+                 "type": "string"               
+                 
+              }
+           ],
+           "responses": {
+              "201": {
+                 "description": "Success",
+                 "message": "Car Uploaded"                    
+              },
+              "default": {
+                 "description": "Error",
+                 "schema": {
+                    "$ref": "#/definitions/ErrorResponse"
+                 }
+              }
+           }
+         },
+         "patch":{
+           "description": "Updates 'cars' to the caller",
+           "operationId": "patchCars",
+           "parameters": [
+              {
+                 "name": "id",
+                 "in": "path",
+                 
+                 "required": false,
+                 "type": "integer"              
+              },
+              {
+                 "name": "status",
+                 "in": "path",
+                
+                 "required": false,
+                 "type": "string"               
+                 
+              },
+             
+              {
+                 "name": "price",
+                 "in": "path",
+                
+                 "required": false,
+                 "type": "integer"               
+                 
+              }
+           ]
+         },
+        
+        
+      "get": {
+        "description": "Returns 'all cars' to the caller",
+        "operationId": "getCars",
+        "parameters": [               
+        ],
+        "responses": {
+           "200": {
+              "description": "Success"                   
+           },
+           "default": {
+              "description": "Error",
+              "schema": {
+                 "$ref": "#/definitions/ErrorResponse"
+              }
+           }
+        
+         }
+     }}
+  },
+  
+       "/swagger": {
+          "x-swagger-pipe": "swagger_raw"
+       },
+    
+    "definitions": {
+       "HelloWorldResponse": {
+          "required": [
+             "message"
+          ],
+          "properties": {
+             "message": {
+                "type": "string"
+             }
+          }
+       },
+       "ErrorResponse": {
+          "required": [
+             "message"
+          ],
+          "properties": {
+             "message": {
+                "type": "string"
+             }
+          }
+       }
+       
+    }
+    }

@@ -1,0 +1,165 @@
+<ul class='nav'>
+        <ul class='nav1'>
+            <li class='nav-bar'><a class="active" id='home' href='/dashboard'>Auto Mart</a></li>
+        <li class='nav-bar'><a id='contact' href='contact'>Contact Us</a></li>
+        <li class='nav-bar'><a id='about' href='about'>About Us</a></li>
+        </ul>
+        <ul class='nav2'> 
+          {{#if user}}  
+            <li class='nav-bar'><a id='register-link'href='/auth/post'><i class="material-icons">
+drive_eta
+</i> &nbsp; SELL</a></li> 
+                     
+            <div class='nav-bar' id='view_profile'><a id='login-link' style='cursor:pointer;color:antiquewhite'><i class="material-icons">
+perm_identity
+</i> &nbsp; View Profile</a></div>  
+ <li class='nav-bar'><a id='register-link' href='/auth/logout'>Logout</a></li>                             
+           {{else}}
+               <li class='nav-bar'><a id='login-link' href='/auth/login'>Login</a></li>
+            <li class='nav-bar'><a id='register-link' href='/auth/register'>Register</a></li>         
+             {{/if}}      
+            <!--<input type="text" placeholder="Search..">
+            <button id='search' type="submit">
+                <i class="material-icons">search</i>
+            </button>-->          
+        </ul>
+    </ul>
+ {{#if success_msg}}
+ <div class='alert alert-success'>{{success_msg}}</div>
+ {{/if}}
+ {{#if error_msg}}
+ <div class='alert alert-danger'>{{error_msg}}</div>
+ {{/if}}
+ {{#if error}}
+ <div class='alert alert-danger'>{{error}}</div>
+ {{/if}}  
+
+    <marquee>  Welcome  to Olaitan Auto Mart 
+        <strong>{{this.user.firstName}} {{this.user.lastName}}</strong>........For best deals, you can contact us on +234 6894038382, +234 574683828.
+        You can also email us at olaitan@automart.com.
+    </marquee>
+
+    <div class='slides'>        
+        <div class='slider' id='slide-left'></div>        
+        <div class='sliderC' id='slide-center'>
+            {{#each items}}
+            <img class='slide-img' src="{{this.image_url}}">          
+            {{/each}}
+    </div>
+
+        <!--Cars Filter-->
+        <div class='slider' id='slide-right'>
+            <h2>Filter Car</h2>
+            <form class='filter' method='post' action=''>
+                <label class='labels'>Car Make<span id='asterisk'>*</span></label>
+                <select class='filter-query' id='filter-car-make'>
+                    <option selected disabled>select</option>
+                    <option value='A'>Honda</option>
+                    <option value='B'>Toyota</option>
+                    <option value='C'>Peugeot</option>
+                    <option value='A'>Mercedes</option>
+                    <option value='B'>Nissan</option>
+                    <option value='C'>Lexus</option>
+                </select>
+
+                <label class='labels'>Condition<span id='asterisk'>*</span></label>
+                <div class='post-a-car-details' id='car-type'>
+                    <input name='C' type='radio'> New
+                    <input name='C' type='radio'> Fairly Used
+                    <input name='C' type='radio'> Used
+                </div>
+
+                <label class='labels'>Price Range ($)<span id='asterisk'>*</span></label>
+                <select class='filter-query' id='filter-car-make'>
+                    <option selected disabled>select</option>
+                    <option value='A'>0 - 1000</option>
+                    <option value='B'>1001 - 10000</option>
+                    <option value='C'>10001 - 20000</option>
+                    <option value='D'>20001 - 30000</option>
+                    <option value='E'>30001 - 40000</option>
+                    <option value='F'>40001 - 50000</option>
+                </select>
+                <input id='filter-button' type='submit' value='search'>
+            </form>
+        </div>
+    </div>       
+      
+       <!--Modal for Buy-->
+     <div id="buyModal" class="modal" >     
+        <div class="modal-content" style='width:50%; margin-top:0;'>
+            <span class="close" id='close-buy'>&times;</span>
+        <form  method='POST' action='/dashboard'>
+        <label class='labels2'>Enter Full Names<span id='asterisk'>*</span></label>                  
+        <input class='post-a-car-details2' id='car-details-A' name='fullNames' required>
+        <label class='labels2'>Customer ID<span id='asterisk'>*</span></label>                  
+        <input class='post-a-car-details2' id='car-details-A' name='customerId' required >  
+        <label class='labels2'>Address<span id='asterisk'>*</span></label>                  
+        <input class='post-a-car-details2' id='car-details-A' name='address' required> 
+        <label class='labels2'>Phone<span id='asterisk'>*</span></label>                  
+        <input class='post-a-car-details2' id='car-details-A' type='number' name='phone' required > 
+        <label class='labels2'>Transaction ID (View car details for this ID)<span id='asterisk'>*</span></label>                  
+        <input class='post-a-car-details2' id='car-details-A' name='transactionId' required>          
+      <!--  <label class='labels2'>Gender<span id='asterisk'>*</span></label>  
+        <select  class='post-a-car-details2' id='car-details-E' name='gender' >
+            <option selected disabled>select</option>
+            <option value='Male'>Male</option>
+            <option value='Female' >Female</option>  
+             <option value='Rather not say' >Rather not say</option>          
+        </select>  -->               
+        <label class='labels2'>Mode of Identification<span id='asterisk'>*</span></label>  
+        <div class='post-a-car-details2' id='car-type'>                   
+                <input name='idCard'  type='radio' value='National ID Card' required > National ID Card
+                <input name='idCard' type='radio' value="Voter's card" >Voter's card   
+                <input name='idCard' type='radio' value="Driving License" >Driving License   
+                <input name='idCard' type='radio' value="Others" >Others                              
+        </div>
+        <label class='labels2'>Id Number<span id='asterisk'>*</span></label>                  
+        <input class='post-a-car-details2' id='car-details-A' type='number' name='idNumber' required > 
+        <input id='buy-button' type='submit' value='submit'>         
+    </form>
+    </div>
+    </div>    
+
+    <!--Cars displayed on dashboard-->
+        {{# each items}}
+       <article class='main-A' >  
+        <div class='main-B' >   
+        <img id='car-img' src="{{this.image_url}}" alt='image missing'    />   
+        <div class='main-content' ><strong>Manufacturer: &nbsp;</strong><span > {{this.manufacturer}}</span></div>
+        <div class='main-content' ><strong>Price: &nbsp; </strong> {{this.price}}</div>        
+        <div class='main-content'><strong>Model: &nbsp; </strong> {{this.model}}</div>              
+        <a  href='/auth/detail/{{this._id}}' id='view-detail'>View details</a>
+        <span class='buy-now2' id='buy-now2'>Buy now</span>
+        <a  href='/auth/report'><em id='report'>Report this ad!</em></a>        
+        </div>
+       </article>
+        {{/ each}}
+
+<!-- User Profile Modal-->
+ <div id="profileModal" class="modal" >     
+        <div class="modal-content" style='width:50%; margin-top:0;'>
+            <span class="close" id='close-buy'>&times;</span>
+                <h3 id='car-detail-header'>User Profile</h3>
+<article class='main-A'>
+    <div class='main-B2'>
+        <img style='width:200px; height:170px;border-radius:50%; margin-bottom:1.5rem;' id='car-img22' src="{{this.user.image_url}}" alt='image missing' />
+        <div class='main-content2'><strong>User ID: &nbsp; </strong> {{this.user._id}}</div>
+        <div class='main-content2'><strong>Username: &nbsp; </strong> {{this.user.username}}</div>
+        <div class='main-content2'><strong>First Name: &nbsp;</strong><span> {{this.user.firstName}}</span></div>
+        <div class='main-content2'><strong>Last Name: &nbsp; </strong> {{this.user.lastName}}</div>
+        <div class='main-content2'><strong>Address: &nbsp; </strong> {{this.user.address}}</div>
+        <div class='main-content2'><strong>Phone: &nbsp; </strong> {{this.user.phone}}</div>
+        <div class='main-content2'><strong>Email: &nbsp;</strong><span> {{this.user.email}}</span></div>
+    </div>
+</article>
+    </div>
+    </div>
+
+        <footer class='footer1'>
+        <div id='powered'>
+            <p tabIndex='0'>Powered by Olaitan Auto Mart</p>
+            <p id='copyrights'>Copyright &copy; 2019. All rights reserved.</p>
+        </div>
+        <div>        
+    </div>
+    </footer>
