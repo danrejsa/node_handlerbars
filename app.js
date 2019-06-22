@@ -63,6 +63,9 @@ const router = express.Router();
   resave:true
 }));*/
 
+app.get('/', (req,res){
+        res.send('Hell world');
+ })
 
 var store = new MongoDBStore({
   uri: "mongodb+srv://danrejsa:" + process.env.MONGO_ATLAS_PW +"@danrej-ann6l.mongodb.net/test?retryWrites=true&w=majority",
